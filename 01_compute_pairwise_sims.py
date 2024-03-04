@@ -27,6 +27,7 @@ std = numpy.std(sims)
 z_sims = (sims * avg) / std
 assert z_sims.shape == sims.shape
 ### sorting
+can
 sorted_lst = sorted([(w, numpy.sum(numpy.absolute(z_sims[w_i]))) for w_i, w in enumerate(candidates)], key=lambda item: item[1])
 with open('shortlist_candidates.txt', 'w') as o:
     for w, sum_w in sorted_lst:
